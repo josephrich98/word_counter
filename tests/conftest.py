@@ -7,4 +7,5 @@ def ensure_nltk():
         try:
             nltk.data.find(f"corpora/{pkg}")
         except LookupError:
+            print(f"Downloading NLTK package: {pkg}")
             nltk.download(pkg)
