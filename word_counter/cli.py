@@ -9,7 +9,7 @@ from .logic import (
 def run_cli(argv):
     parser = argparse.ArgumentParser(description="Word Counter")
 
-    parser.add_argument("input", nargs=1, help="Text or filename")
+    parser.add_argument("input", nargs=1, help="Text or filename (if not provided, then will open a GUI)")
 
     parser.add_argument(
         "-o", "--output",
