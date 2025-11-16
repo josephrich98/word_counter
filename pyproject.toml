@@ -15,4 +15,5 @@ dependencies = [
 ]
 
 [project.scripts]
-word_counter = "word_counter.app:main"
+word_counter = "word_counter.__main__:main"
+
