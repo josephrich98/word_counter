@@ -13,7 +13,7 @@ Features:
 ## Installation
 
 ```bash
-pip install word_counter
+pip install "word_counter @ git+https://github.com/josephrich98/word_counter.git"
 ```
 
 ## Usage
