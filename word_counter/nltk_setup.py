@@ -1,10 +1,13 @@
+import os
 import nltk
 
+NLTK_DATA_DIR = os.path.expanduser("~/.local/share/nltk_data")
+os.makedirs(NLTK_DATA_DIR, exist_ok=True)
+
+# Tell NLTK to search here
+nltk.data.path.append(NLTK_DATA_DIR)
+
 def ensure_nltk():
-    """
-    Ensures necessary NLTK data packages are installed.
-    Downloads missing ones automatically.
-    """
     packages = [
         "stopwords",
         "wordnet",
@@ -18,4 +21,4 @@ def ensure_nltk():
             nltk.data.find(f"corpora/{pkg}")
         except LookupError:
             print(f"[word_counter] Downloading NLTK package: {pkg}")
-            nltk.download(pkg, quiet=True)
+            nltk.download(pkg, download_dir=NLTK_DATA_DIR, quiet=True)

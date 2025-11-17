@@ -1,5 +1,7 @@
 # Word counter
 
+![alt text](https://github.com/josephrich98/word_counter/blob/main/figures/example.png?raw=true)
+
 A simple command-line tool to count the frequency of words in a file.
 
 Features:
