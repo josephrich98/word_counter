@@ -9,8 +9,9 @@ from .logic import (
     lemmatize_words,
     count_frequencies,
     filter_singletons,
-    format_table
+    format_table,
 )
+from .nltk_setup import ensure_nltk
 
 
 def run_count(input_box, output_box, show_singletons_var, current_results):
@@ -66,6 +67,8 @@ def save_csv(current_results):
 
 
 def main():
+    ensure_nltk()
+    
     # Mutable “global” state held in an object
     current_results = []
 
