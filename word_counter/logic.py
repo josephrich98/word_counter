@@ -5,10 +5,10 @@ from nltk import pos_tag
 from nltk.stem import WordNetLemmatizer
 from .nltk_setup import ensure_nltk
 
+ensure_nltk()
+
 stop_words = set(stopwords.words("english"))
 lemmatizer = WordNetLemmatizer()
-
-ensure_nltk()
 
 def get_wordnet_pos(treebank_tag):
     if treebank_tag.startswith("J"):
