@@ -14,6 +14,9 @@ dependencies = [
     "nltk"
 ]
 
+[tool.setuptools]
+packages = ["word_counter"]
+
 [project.scripts]
 word_counter = "word_counter.__main__:main"
 
